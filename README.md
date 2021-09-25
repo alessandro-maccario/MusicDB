@@ -10,6 +10,8 @@ The database contains (WIP) the following tables:
 - Albums
 - Songs
 
+## Example query
+Get all the artists that are included into a specific genre with the word *Hard* (like *Hard Rock*):
 ```
 SELECT artists.name, albums.genre
 FROM albums
