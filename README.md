@@ -9,6 +9,7 @@ The database contains (WIP) the following tables:
 - Artists
 - Albums
 - Songs
+- Labels
 
 ## Example query
 Get all the artists that are included into a specific genre with the word *Hard* (like *Hard Rock*):
