@@ -1,8 +1,12 @@
+# DATABASE
 DROP DATABASE IF EXISTS spotify;
 CREATE DATABASE spotify;
 
 USE spotify;
 
+-- -----------------------------------------------------------------------------------------------------------
+
+# TABLES
 CREATE TABLE artists (
 	id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL,
@@ -38,8 +42,9 @@ CREATE TABLE songs (
 AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
-# INSERT DATA
 -- -----------------------------------------------------------------------------------------------------------
+# INSERT DATA
+
 # QUEEN
 INSERT INTO artists (name) VALUES ('Queen');
 SET @last_id_in_artists = LAST_INSERT_ID();
@@ -53,5 +58,13 @@ SET @last_id_in_artists = LAST_INSERT_ID();
 INSERT INTO albums (title, id_artist, genre) VALUES ('The Razors Edge', @last_id_in_artists, 'Hard Rock');
 # AC/DC SONGS
 INSERT INTO songs (title, id_album, lenght) VALUES ('Thunderstruck', @last_id_in_artists, '0452');
+
+-- -----------------------------------------------------------------------------------------------------------
+# KISS
+INSERT INTO artists (name) VALUES ('Kiss');
+SET @last_id_in_artists = LAST_INSERT_ID();
+INSERT INTO albums (title, id_artist, genre) VALUES ('Dinasty', @last_id_in_artists, 'Hard/Dance Rock');
+# KISS SONGS
+INSERT INTO songs (title, id_album, lenght) VALUES ("I Was Made for Lovin' You", @last_id_in_artists, '0401');
 
 -- -----------------------------------------------------------------------------------------------------------
