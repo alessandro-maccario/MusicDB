@@ -51,6 +51,7 @@ SET @last_id_in_artists = LAST_INSERT_ID();
 INSERT INTO albums (title, id_artist, genre) VALUES ('The Game', @last_id_in_artists, 'Funk Rock');
 # QUEEN SONGS
 INSERT INTO songs (title, id_album, lenght) VALUES ('Another One Bites the Dust', @last_id_in_artists, '0334');
+
 -- -----------------------------------------------------------------------------------------------------------
 # AC/DC
 INSERT INTO artists (name) VALUES ('AC/DC');
@@ -66,5 +67,13 @@ SET @last_id_in_artists = LAST_INSERT_ID();
 INSERT INTO albums (title, id_artist, genre) VALUES ('Dinasty', @last_id_in_artists, 'Hard/Dance Rock');
 # KISS SONGS
 INSERT INTO songs (title, id_album, lenght) VALUES ("I Was Made for Lovin' You", @last_id_in_artists, '0401');
+
+-- -----------------------------------------------------------------------------------------------------------
+# DIRE STRAITS
+INSERT INTO artists (name) VALUES ('DIRE STRAITS');
+SET @last_id_in_artists = LAST_INSERT_ID();
+INSERT INTO albums (title, id_artist, genre) VALUES ('Brothers in Arms', @last_id_in_artists, 'Rock');
+# DIRE STRAITS SONGS
+INSERT INTO songs (title, id_album, lenght) VALUES ("Walk of Life", @last_id_in_artists, '0412');
 
 -- -----------------------------------------------------------------------------------------------------------
