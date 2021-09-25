@@ -9,3 +9,10 @@ The database contains (WIP) the following tables:
 - Artists
 - Albums
 - Songs
+
+```
+SELECT artists.name, albums.genre
+FROM albums
+JOIN artists ON artists.id = albums.id_artist
+WHERE genre LIKE '%Hard%';
+```
