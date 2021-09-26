@@ -13,9 +13,21 @@ The database contains (WIP) the following tables:
 
 ## Example query
 Get all the artists that are included into a specific genre with the word *Hard* (like *Hard Rock*):
+
+1.
 ```
 SELECT artists.name, albums.genre
 FROM albums
 JOIN artists ON artists.id = albums.id_artist
 WHERE genre LIKE '%Hard%';
 ```
+
+2.
+```
+SELECT T1.title AS Album_name, T3.name AS Band, T2.title AS Song_title
+FROM albums AS T1
+INNER JOIN songs AS T2 ON T1.id = T2.id_album
+INNER JOIN artists AS T3 ON T1.id_artist = T3.id
+WHERE T3.name = 'Queen';
+```
+
