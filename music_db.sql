@@ -64,7 +64,16 @@ SET @last_id_in_artists = LAST_INSERT_ID();
 # QUEEN ALBUMS
 INSERT INTO albums (title, id_artist, genre) VALUES ('The Game', @last_id_in_artists, 'Funk Rock');
 # QUEEN SONGS
+INSERT INTO songs (title, id_album, lenght) VALUES ('Play the Game', @last_id_in_artists, '0330');
+INSERT INTO songs (title, id_album, lenght) VALUES ('Dragon Attack', @last_id_in_artists, '0419');
 INSERT INTO songs (title, id_album, lenght) VALUES ('Another One Bites the Dust', @last_id_in_artists, '0334');
+INSERT INTO songs (title, id_album, lenght) VALUES ('Need Your Loving Tonight ', @last_id_in_artists, '0249');
+INSERT INTO songs (title, id_album, lenght) VALUES ('Crazy Little Thing Called Love', @last_id_in_artists, '0248');
+INSERT INTO songs (title, id_album, lenght) VALUES ('Rock It', @last_id_in_artists, '0433');
+INSERT INTO songs (title, id_album, lenght) VALUES ("Don't Try Suicide", @last_id_in_artists, '0352');
+INSERT INTO songs (title, id_album, lenght) VALUES ("Sail Away Sweet Sister", @last_id_in_artists, '0333');
+INSERT INTO songs (title, id_album, lenght) VALUES ("Coming Soon", @last_id_in_artists, '0251');
+INSERT INTO songs (title, id_album, lenght) VALUES ("Save Me", @last_id_in_artists, '0349');
 # QUEEN LABELS
 INSERT INTO labels (name, id_artist) VALUES ('EMI/Elektra', @last_id_in_artists);
 
